@@ -10,12 +10,32 @@ html{
 
 body{
   font-family: Arial, Helvetica, sans-serif;
-  color: black;
+  min-height: 100vh; /*Make more flexible with extra content */
+
+  background: linear-gradient(
+    135deg, /* Adjust Degree the way gradient */
+    #dfe9f3 0%,
+    #ffffff 50%,
+    #d3cce3 100%
+  );
 }
 
 header{
-  padding: 25px 40px;
-  border-bottom: 1px solid white;
+  position: sticky;
+  top: 20px;
+  margin: 20px auto;
+  width: 90%;
+  padding: 15px 40px;
+
+  background: rgba(225, 255,255, 0.2);
+  backdrop-filter: blur(15px); /*Add backdrop filter for back*/
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 15px;
+  border: 1px soild rgba(225, 255,255, 0.3);
+  
+  /*          x. y. shadow detail. color */ 
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
 .nav{
@@ -45,11 +65,35 @@ header{
 
 .hero button{
   padding: 12px 25px;
-  border: none; /*Border setting*/
-  background-color: black;
-  color: white;
-  cursor: pointer; /*Cursor Reaction*/
+  border-radius: 12px;
+
+  background-color: rgba(225, 255,255, 0.3);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(225, 225, 225, 0.4);
+  cursor: pointer;
+  transition: all 0.3 ease;
 }
+
+.hero button:hover,
+.Contact button:hover{
+  background: rgba(225, 225, 225, 0.6);
+  transform: translateY(-5px)
+}
+
+.Contact button{
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 12px;
+
+  background-color: rgba(225, 255,255, 0.3);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(225, 225, 225, 0.4);
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
 
 .port{
   padding: 60px 40px;
@@ -68,25 +112,41 @@ header{
 
 .card{
   padding: 40px 20px;
-  border: 1px solid #ddd;
   text-align: center;
-  border-radius: 10px; /*Adjust how smooth angle*/
-  background: white;
+  border-radius: 20px; /*Adjust how smooth angle*/
+
+  background: rgba(225, 225, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px rgba(225, 225, 225, 0.4);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .Contact{
+  margin: 60px auto;
+  width: 90%;
   padding: 60px 20px;
   text-align: center;
-  background-color: #f9f9f9;
+
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 25px;
+  border: 1px solid rgba(225,225,225,0.4);
+
+  box-shadow: 0 8px 32 px rgba(0,0,0,0.1);
 }
 
-.Contact button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: black;
-  color: white;
-  border: none;
-}
 
 footer {
   padding: 20px;
