@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Md';
+  src: url('fonts/Md-normal.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Md';
+  src: url('fonts/Md-thick.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Thai';
+  src: url('fonts/Thai-normal.ttf') format('truetype');
+  font-weight: 400;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -9,70 +27,98 @@ html{
 }
 
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Md' , sans-serif;
+  color: rgb(255, 255, 255);
   min-height: 100vh; /*Make more flexible with extra content */
 
-  background: linear-gradient(
-    135deg, /* Adjust Degree the way gradient */
-    #dfe9f3 0%,
-    #ffffff 50%,
-    #d3cce3 100%
-  );
+background: hsla(290, 62%, 33%, 1);
+
+background: radial-gradient(circle, hsla(290, 62%, 33%, 1) 0%, hsla(290, 63%, 22%, 1) 0%, hsla(289, 62%, 21%, 1) 0%, hsla(0, 0%, 0%, 1) 43%);
+
+background: -moz-radial-gradient(circle, hsla(290, 62%, 33%, 1) 0%, hsla(290, 63%, 22%, 1) 0%, hsla(289, 62%, 21%, 1) 0%, hsla(0, 0%, 0%, 1) 43%);
+
+background: -webkit-radial-gradient(circle, hsla(290, 62%, 33%, 1) 0%, hsla(290, 63%, 22%, 1) 0%, hsla(289, 62%, 21%, 1) 0%, hsla(0, 0%, 0%, 1) 43%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#772088", endColorstr="#50155C", GradientType=1 );
 }
 
 header{
-  position: sticky;
-  top: 20px;
+  /* position: sticky; */
+  top: 10px;
   margin: 20px auto;
-  width: 90%;
-  padding: 15px 40px;
+  width: 100%;
+  padding: 0px 40px;
 
-  background: rgba(225, 255,255, 0.2);
-  backdrop-filter: blur(15px); /*Add backdrop filter for back*/
-  -webkit-backdrop-filter: blur(12px);
+  /* background: rgba(225, 255,255, 0.2); */
+  /* backdrop-filter: blur(15px); /*Add backdrop filter for back*/
+  /* -webkit-backdrop-filter: blur(12px);   */
 
-  border-radius: 15px;
-  border: 1px soild rgba(225, 255,255, 0.3);
+  /* border-radius: 15px;
+  border: 1px solid rgba(225, 255,255, 0.3); */
   
   /*          x. y. shadow detail. color */ 
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  /* box-shadow: 0 8px 32px rgba(0,0,0,0.1); */
 }
 
 .nav{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-.links a{
-  margin-left: 20px;
-  text-decoration: none; /*hide highlight color nav */
-  color: black;
+div.logo{
+  font-size: 24px;
   font-weight: bold;
 }
 
+.links a{
+  margin-left: 25px;
+  text-decoration: none; /*hide highlight color nav */
+  color: rgb(153, 161, 160);
+  font-weight: 500;
+}
+
 .hero{
-  padding: 100px 20px;
+  padding: 250px 20px;
   text-align: center;
-  background: #f4f4f4;
 }
 
 .hero h1{
   font-size: 32px;
   max-width: 700px;
   margin: 0 auto 20px;
+  font-size: 47px;
+}
+
+.hero h6{
+  font-size: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+  color: rgb(153, 161, 160);
+  font-weight: 500;
+}
+
+.hero .hello{
+  font-size: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+  color: rgb(210, 134, 247);
+  letter-spacing: 10px;
+
 }
 
 .hero button{
-  padding: 12px 25px;
-  border-radius: 12px;
+  padding: 17px 37px;
+  margin: 20px auto 0;
+  border-radius: 100px;
 
-  background-color: rgba(225, 255,255, 0.3);
+  background-color: rgba(255, 255, 255);
   backdrop-filter: blur(8px);
 
   border: 1px solid rgba(225, 225, 225, 0.4);
   cursor: pointer;
   transition: all 0.3 ease;
+  font-weight: 700;
 }
 
 .hero button:hover,
@@ -91,7 +137,7 @@ header{
 
   border: 1px solid rgba(225, 225, 225, 0.4);
   cursor: pointer;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
 
 
@@ -119,7 +165,7 @@ header{
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  border: 1px rgba(225, 225, 225, 0.4);
+  border: 1px solid rgba(225, 225, 225, 0.4);
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 
   transition: all 0.3s ease;
@@ -144,7 +190,7 @@ header{
   border-radius: 25px;
   border: 1px solid rgba(225,225,225,0.4);
 
-  box-shadow: 0 8px 32 px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
 
